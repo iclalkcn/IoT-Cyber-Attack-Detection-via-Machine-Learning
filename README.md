@@ -9,3 +9,13 @@ merge-label-and-sample.py: Ham verileri birleştirir ve etiketler. --  python me
 rf-importance.py: En kritik 35 özelliği seçer. -- python rf_importance_selection.py
 
 lightgbm-model.py: SMOTE ve LightGBM ile eğitimi başlatır. -- python lightgbm_model.py
+
+
+
+🛠️ Teknik Detaylar
+
+Veri Seti: CIC-IoT-2023
+Veri Dengeleme: SMOTE
+Özellik Seçimi: RF-Importance
+Model: LightGBM
+Dil: Python
