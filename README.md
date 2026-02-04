@@ -1,2 +1,11 @@
-# IoT-Cyber-Attack-Detection-via-Machine-Learning
-CIC-IoT-2023 veri setiyle IoT ağlarında siber saldırı tespiti yapan ML projesidir. Veri ön işleme (SMOTE), RF-Importance ile öznitelik seçimi ve LightGBM modelleme aşamalarını içerir. / IoT cyber-attack detection using LightGBM. Includes data preprocessing with SMOTE and feature selection via RF-Importance on CIC-IoT-2023 dataset.
+Önemli Not: Veri seti boyut limiti (25MB+) nedeniyle GitHub'a yüklenmemiştir. Projeyi çalıştırmak için CIC-IoT-2023 veri setinden "merge-label-and-sample.py" dosyasındaki belirtilen saldırı/normal trafik verilerini indirip ana dizine eklemelisiniz.
+
+Çalıştırma Sırası (Pipeline)
+
+Sistemin çalışması için şu adımları sırasıyla çalıştırın:
+
+merge-label-and-sample.py: Ham verileri birleştirir ve etiketler. --  python merge_label_and_sample.py
+
+rf-importance.py: En kritik 35 özelliği seçer. -- python rf_importance_selection.py
+
+lightgbm-model.py: SMOTE ve LightGBM ile eğitimi başlatır. -- python lightgbm_model.py
